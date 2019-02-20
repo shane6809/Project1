@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/app_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_title"
+        android:gravity="center"
+        />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dip"
+    android:layout_weight="1"
+    android:gravity="center|bottom"
+    android:orientation="vertical" >
+
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:text= "@string/start_button"
+        />
+
+    <Button
+        android:id="@+id/high_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:text= "@string/high_button"
+        />
+
+    <Button
+        android:id="@+id/settings_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:text= "@string/settings_button"
+        />
+
+    <Button
+        android:id="@+id/help_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:text= "@string/help_button"
+        />
+
+
+</LinearLayout>
+
+
+</LinearLayout>
