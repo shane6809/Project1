@@ -15,6 +15,8 @@
     <string name="music_button">Music</string>
     <string name="help_title">Memory Match Help</string>
     <string name="title_activity_game_select">game_select</string>
-
+    <string name="game1">Game1</string>
+    <string name="game2">Game2</string>
+    <string name="game3">Game3</string>
 
 </resources>

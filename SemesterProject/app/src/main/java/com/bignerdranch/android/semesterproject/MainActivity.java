@@ -33,6 +33,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        mHelpButton=(Button)findViewById(R.id.help_button);
+        mHelpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, game_help.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override
