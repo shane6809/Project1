@@ -6,19 +6,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class game_page extends AppCompatActivity {
+public class highscores_page extends AppCompatActivity {
 
     private Button mBackButton;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game_page);
+        setContentView(R.layout.activity_highscores_page);
 
         mBackButton=(Button)findViewById(R.id.back_button);
         mBackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(game_page.this, game_select.class);
+                Intent intent = new Intent(highscores_page.this, MainActivity.class);
                 startActivity(intent);
             }
         });

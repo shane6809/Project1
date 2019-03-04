@@ -42,6 +42,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        mSettingsButton=(Button)findViewById(R.id.settings_button);
+        mSettingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, game_settings.class);
+                startActivity(intent);
+            }
+        });
+
+        mHighScoresButton=(Button)findViewById(R.id.high_button);
+        mHighScoresButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, highscores_page.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override
