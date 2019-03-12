@@ -42,10 +42,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSensorChanged(SensorEvent sensorEvent) {
                 // Code for screen change based on light
-                if (sensorEvent.values[0] > 12000f) { // Brighter color for easy reading in high light
+                if (sensorEvent.values[0] > 30000f) { // Brighter color for easy reading in high light
                     getWindow().getDecorView().setBackgroundColor(Color.WHITE);
-                } else if (sensorEvent.values[0] < 12000f) { // Night mode for low light readability
-                    getWindow().getDecorView().setBackgroundColor(Color.BLACK);
+                }
+
+                if (sensorEvent.values[0] > 22001f && sensorEvent.values[0]< 29999) { // Brighter color for easy reading in medium-high light
+                    getWindow().getDecorView().setBackgroundColor(Color.YELLOW);
+                }
+
+                if (sensorEvent.values[0] > 17001f && sensorEvent.values[0]< 22000) { // Brighter color for easy reading in medium light
+                    getWindow().getDecorView().setBackgroundColor(Color.RED);
+                }
+
+                if (sensorEvent.values[0] > 12001f && sensorEvent.values[0]< 17000) { // Brighter color for easy reading in medium light
+                    getWindow().getDecorView().setBackgroundColor(Color.BLUE);
+                }
+
+                else if (sensorEvent.values[0] < 12000f) { // Night mode for low light readability using DarkViolet
+                    getWindow().getDecorView().setBackgroundColor(getResources().getColor(R.color.DarkViolet));
                 }
             }
 
