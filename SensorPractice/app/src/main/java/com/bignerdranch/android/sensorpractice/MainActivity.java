@@ -12,13 +12,13 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    /* Test 2 after File Sync */
+    /* Test 4 after File Sync, sensor template, light sensor */
     private SensorManager sensorManager;
-    private Sensor gyroscopeSensor;
-    private SensorEventListener gyroscopeSensorListener;
+    private Sensor lightSensor;
+    private SensorEventListener lightSensorListener;
 
 
-
+    //Sensor managers
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,24 +26,26 @@ public class MainActivity extends AppCompatActivity {
 
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
 
-        gyroscopeSensor =
-                sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
+        lightSensor =
+                sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
 
-        if (gyroscopeSensor == null) {
-            Toast.makeText(this, "Gyro Test", Toast.LENGTH_SHORT).show();
+        //message for hardware not having the correct sensor
+        if (lightSensor == null) {
+            Toast.makeText(this, "You do not have the necessary sensor",
+                    Toast.LENGTH_SHORT).show();
             finish();
 
         }
 
-        // Create a listener
-        gyroscopeSensorListener = new SensorEventListener() {
+        // Create listener
+        lightSensorListener = new SensorEventListener() {
             @Override
             public void onSensorChanged(SensorEvent sensorEvent) {
-                // More code goes here
-                if (sensorEvent.values[2] > 0.5f) { // anticlockwise
-                    getWindow().getDecorView().setBackgroundColor(Color.BLUE);
-                } else if (sensorEvent.values[2] < -0.5f) { // clockwise
-                    getWindow().getDecorView().setBackgroundColor(Color.YELLOW);
+                // Code for screen change based on light
+                if (sensorEvent.values[0] > 12000f) { // Brighter color for easy reading in high light
+                    getWindow().getDecorView().setBackgroundColor(Color.WHITE);
+                } else if (sensorEvent.values[0] < 12000f) { // Night mode for low light readability
+                    getWindow().getDecorView().setBackgroundColor(Color.BLACK);
                 }
             }
 
@@ -57,16 +59,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume(){
         super.onResume();
-        sensorManager.registerListener(gyroscopeSensorListener,
-                gyroscopeSensor, SensorManager.SENSOR_DELAY_NORMAL);
+        sensorManager.registerListener(lightSensorListener,
+                lightSensor, SensorManager.SENSOR_DELAY_NORMAL);
 
     }
 
-
+    //Unregister listener on pause
     @Override
     protected void onPause(){
         super.onPause();
-        sensorManager.unregisterListener(gyroscopeSensorListener);
+        sensorManager.unregisterListener(lightSensorListener);
     }
 
 }
