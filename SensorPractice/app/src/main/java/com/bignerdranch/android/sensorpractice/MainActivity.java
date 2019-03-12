@@ -41,25 +41,37 @@ public class MainActivity extends AppCompatActivity {
         lightSensorListener = new SensorEventListener() {
             @Override
             public void onSensorChanged(SensorEvent sensorEvent) {
+                float value = sensorEvent.values[0];
+
                 // Code for screen change based on light
                 if (sensorEvent.values[0] > 30000f) { // Brighter color for easy reading in high light
                     getWindow().getDecorView().setBackgroundColor(Color.WHITE);
+                    Toast.makeText(MainActivity.this, "Luminosity" + value, Toast.LENGTH_SHORT).show();
+
                 }
 
                 if (sensorEvent.values[0] > 22001f && sensorEvent.values[0]< 29999) { // Brighter color for easy reading in medium-high light
                     getWindow().getDecorView().setBackgroundColor(Color.YELLOW);
+                    Toast.makeText(MainActivity.this, "Luminosity" + value, Toast.LENGTH_SHORT).show();
+
                 }
 
                 if (sensorEvent.values[0] > 17001f && sensorEvent.values[0]< 22000) { // Brighter color for easy reading in medium light
                     getWindow().getDecorView().setBackgroundColor(Color.RED);
+                    Toast.makeText(MainActivity.this, "Luminosity" + value, Toast.LENGTH_SHORT).show();
+
                 }
 
                 if (sensorEvent.values[0] > 12001f && sensorEvent.values[0]< 17000) { // Brighter color for easy reading in medium light
                     getWindow().getDecorView().setBackgroundColor(Color.BLUE);
+                    Toast.makeText(MainActivity.this, "Luminosity" + value, Toast.LENGTH_SHORT).show();
+
                 }
 
                 else if (sensorEvent.values[0] < 12000f) { // Night mode for low light readability using DarkViolet
                     getWindow().getDecorView().setBackgroundColor(getResources().getColor(R.color.DarkViolet));
+                    Toast.makeText(MainActivity.this, "Luminosity" + value, Toast.LENGTH_SHORT).show();
+                   
                 }
             }
 
