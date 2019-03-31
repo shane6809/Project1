@@ -24,5 +24,7 @@ public class game_settings extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
     }
 }

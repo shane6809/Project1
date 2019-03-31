@@ -6,7 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfc5784c-a4f0-4436-a0a1-6f9713fc1eac" name="Default Changelist" comment="">
@@ -20,7 +20,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/semesterproject/game_settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/semesterproject/game_settings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_game_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_game_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +38,7 @@
     <session id="1764428179">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
@@ -51,15 +50,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="754" />
-          <entry key="txt" value="435" />
+          <entry key="java" value="756" />
+          <entry key="txt" value="464" />
           <entry key="xml" value="447" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="754" />
-          <entry key="PLAIN_TEXT" value="435" />
+          <entry key="JAVA" value="756" />
+          <entry key="PLAIN_TEXT" value="464" />
           <entry key="XML" value="447" />
         </counts>
       </usages-collector>
@@ -83,12 +82,12 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_game_settings.xml">
           <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
+            <state relative-caret-position="317">
+              <caret line="71" column="43" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="43" />
               <folding>
                 <element signature="e#447#471#0" expanded="true" />
                 <element signature="e#1021#1039#0" expanded="true" />
-                <element signature="e#2181#2202#0" expanded="true" />
+                <element signature="e#1978#1999#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -97,8 +96,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/semesterproject/game_settings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+            <state relative-caret-position="442">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#576#815#0" expanded="true" />
@@ -131,7 +130,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
-              <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+              <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -417,12 +416,27 @@
       <option name="project" value="LOCAL" />
       <updated>1554057673342</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added game_settings button for user name, added user_name java class, added layout reverted to basic activity, first setup of activity_user_name.xml&#10;&#10;Undid this trying choose user in settings, and sharing key-vaule, replaced music, and sound with switches.  Problems happened revert 1.">
+      <created>1554064790755</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1554064790755</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1933" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.20586666" />
@@ -436,12 +450,12 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
       <window_info anchor="bottom" id="Logcat" order="3" weight="0.329718" />
-      <window_info anchor="bottom" id="TODO" order="4" />
-      <window_info anchor="bottom" id="Debug" order="5" />
+      <window_info anchor="bottom" id="TODO" order="4" weight="0.329718" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="6" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.329718" />
-      <window_info anchor="bottom" id="Build" order="9" weight="0.2494577" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Build" order="9" visible="true" weight="0.2494577" />
       <window_info anchor="bottom" id="Android Profiler" order="10" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
@@ -472,7 +486,8 @@
     <MESSAGE value="Added game_settings button for user, added user_name java class" />
     <MESSAGE value="Added game_settings button for user name, added user_name java class, added layout reverted to basic activity, first setup of activity_user_name.xml" />
     <MESSAGE value="Added game_settings button for user name, added user_name java class, added layout reverted to basic activity, first setup of activity_user_name.xml&#10;&#10;Undid this trying choose user in settings, and sharing key-vaule, replaced music, and sound with switches." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added game_settings button for user name, added user_name java class, added layout reverted to basic activity, first setup of activity_user_name.xml&#10;&#10;Undid this trying choose user in settings, and sharing key-vaule, replaced music, and sound with switches." />
+    <MESSAGE value="Added game_settings button for user name, added user_name java class, added layout reverted to basic activity, first setup of activity_user_name.xml&#10;&#10;Undid this trying choose user in settings, and sharing key-vaule, replaced music, and sound with switches.  Problems happened revert 1." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added game_settings button for user name, added user_name java class, added layout reverted to basic activity, first setup of activity_user_name.xml&#10;&#10;Undid this trying choose user in settings, and sharing key-vaule, replaced music, and sound with switches.  Problems happened revert 1." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/semesterproject/game_select.java">
@@ -565,30 +580,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_game_settings.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-          <folding>
-            <element signature="e#447#471#0" expanded="true" />
-            <element signature="e#1021#1039#0" expanded="true" />
-            <element signature="e#2181#2202#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
-          <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+          <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_game_settings.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="71" column="43" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="43" />
+          <folding>
+            <element signature="e#447#471#0" expanded="true" />
+            <element signature="e#1021#1039#0" expanded="true" />
+            <element signature="e#1978#1999#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/semesterproject/game_settings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+        <state relative-caret-position="442">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#576#815#0" expanded="true" />

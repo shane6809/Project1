@@ -38,20 +38,28 @@
             android:textAlignment="center" />
 
         <Switch
-            android:id="@+id/switch2"
+            android:id="@+id/switchmusic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:checked="true"
             android:text="Music" />
 
         <Switch
-            android:id="@+id/switch1"
+            android:id="@+id/switchsound"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:checked="true"
             android:text="Sound" />
 
-        />
+        <Button
+            android:id="@+id/savebutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Settings" />
+
+
+
+
 
     </LinearLayout>
 
