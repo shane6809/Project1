@@ -20,5 +20,8 @@
     <string name="game3">Game3</string>
     <string name="username">User Name</string>
     <string name="title_activity_user_name">user_name</string>
+    <string name="viewusername">USER NAME</string>
+    <string name="adduser">ADD</string>
+    <string name="editUserName">User Name</string>
 
 </resources>
