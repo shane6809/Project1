@@ -19,5 +19,6 @@
     <string name="game2">Game2</string>
     <string name="game3">Game3</string>
     <string name="username">User Name</string>
+    <string name="title_activity_user_name">user_name</string>
 
 </resources>
