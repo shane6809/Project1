@@ -9,6 +9,7 @@ import android.widget.Button;
 public class game_settings extends AppCompatActivity {
 
     private Button mBackButton;
+    private Button mUserNameButton;
 
 
     @Override
@@ -21,6 +22,15 @@ public class game_settings extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(game_settings.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mUserNameButton=(Button)findViewById(R.id.username);
+        mUserNameButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(game_settings.this, user_name.class);
                 startActivity(intent);
             }
         });

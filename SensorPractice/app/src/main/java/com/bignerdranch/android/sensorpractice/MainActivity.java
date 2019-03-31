@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 else if (sensorEvent.values[0] < 12000f) { // Night mode for low light readability using DarkViolet
                     getWindow().getDecorView().setBackgroundColor(getResources().getColor(R.color.DarkViolet));
                     Toast.makeText(MainActivity.this, "Luminosity" + value, Toast.LENGTH_SHORT).show();
-                   
+
                 }
             }
 
