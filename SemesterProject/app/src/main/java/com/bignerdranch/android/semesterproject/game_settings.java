@@ -11,17 +11,25 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 public class game_settings extends AppCompatActivity {
 
     private Button mBackButton;
-    EditText userName;
-    TextView dataView;
+
+    private EditText nameInput;
+    private SharedPreferences prefs;
+
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_settings);
+
+        prefs = getSharedPreferences("MY_DATA", MODE_PRIVATE);
+        nameInput =(EditText)findViewById(R.id.editUserName);
+        String name = prefs.getString("MY_NAME", "");
 
         mBackButton = (Button) findViewById(R.id.back_button);
         mBackButton.setOnClickListener(new View.OnClickListener() {
@@ -32,19 +40,29 @@ public class game_settings extends AppCompatActivity {
             }
         });
 
-        userName = (EditText) findViewById(R.id.editUserName);
-    }
 
-    public void saveData(View view) {
-        SharedPreferences loginData = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = loginData.edit();
-        editor.putString("userName", userName.getText().toString());
+
+
+        nameInput.setText(name);
+
+
+
+
+    }
+    public void saveData(View view){
+        // Get input text.
+        String name = nameInput.getText().toString();
+
+
+        // Save data.
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("MY_NAME", name);
         editor.apply();
-        String name = loginData.getString("userName", "");
 
-        Toast.makeText(this, "Saved" + " " + name, Toast.LENGTH_LONG).show();
 
     }
-
-
 }
+
+
+
+
