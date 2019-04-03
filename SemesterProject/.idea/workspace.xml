@@ -21,7 +21,6 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/semesterproject/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/semesterproject/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/semesterproject/game_settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/semesterproject/game_settings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_game_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_game_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,28 +39,28 @@
     <session id="1764428179">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.3" value="2" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1865" />
-          <entry key="txt" value="538" />
-          <entry key="xml" value="501" />
+          <entry key="java" value="3943" />
+          <entry key="txt" value="600" />
+          <entry key="xml" value="511" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1865" />
-          <entry key="PLAIN_TEXT" value="538" />
-          <entry key="XML" value="501" />
+          <entry key="JAVA" value="3943" />
+          <entry key="PLAIN_TEXT" value="600" />
+          <entry key="XML" value="511" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -82,37 +81,37 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_game_settings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="38" column="38" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
-              <folding>
-                <element signature="e#1021#1039#0" expanded="true" />
-                <element signature="e#2177#2198#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
           <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/semesterproject/game_settings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#960#1199#0" expanded="true" />
-                <element signature="e#1198#1199#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="102">
+              <caret line="57" column="42" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/semesterproject/game_settings.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1240#1479#0" expanded="true" />
+                <element signature="e#1478#1479#0" expanded="true" />
+                <element signature="e#1597#2038#0" expanded="true" />
+                <element signature="e#2037#2038#0" expanded="true" />
+                <element signature="e#2156#2597#0" expanded="true" />
+                <element signature="e#2596#2597#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/semesterproject/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="340">
+              <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -158,17 +157,17 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_user_name.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/semesterproject/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_game_settings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/semesterproject/game_settings.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/semesterproject/MainActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1296" />
-    <option name="y" value="146" />
-    <option name="width" value="1942" />
-    <option name="height" value="2092" />
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="3866" />
+    <option name="height" value="2106" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -244,12 +243,51 @@
               <item name="res" type="462c0819:PsiDirectoryNode" />
               <item name="values" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SemesterProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SemesterProject" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SemesterProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SemesterProject" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SemesterProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SemesterProject" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="semesterproject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SemesterProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="SemesterProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Android API 28 Platform &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="SemesterProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Android API 28 Platform &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -439,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1554071430712</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Name saved for preferences successful.">
+      <created>1554079936336</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1554079936336</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -465,14 +510,14 @@
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.28524947" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27094474" />
       <window_info anchor="bottom" id="Logcat" order="3" weight="0.329718" />
       <window_info anchor="bottom" id="TODO" order="4" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="6" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.329718" />
-      <window_info anchor="bottom" id="Build" order="9" visible="true" weight="0.2494577" />
+      <window_info anchor="bottom" id="Build" order="9" visible="true" weight="0.30260304" />
       <window_info anchor="bottom" id="Android Profiler" order="10" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
@@ -506,7 +551,8 @@
     <MESSAGE value="Added game_settings button for user name, added user_name java class, added layout reverted to basic activity, first setup of activity_user_name.xml&#10;&#10;Undid this trying choose user in settings, and sharing key-vaule, replaced music, and sound with switches.  Problems happened revert 1." />
     <MESSAGE value="Added game_settings button for user name, added user_name java class, added layout reverted to basic activity, first setup of activity_user_name.xml&#10;&#10;Undid this trying choose user in settings, and sharing key-vaule, replaced music, and sound with switches.  Problems happened revert 2." />
     <MESSAGE value="Trying new save methods, working on retrieving saved name," />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying new save methods, working on retrieving saved name," />
+    <MESSAGE value="Name saved for preferences successful." />
+    <option name="LAST_COMMIT_MESSAGE" value="Name saved for preferences successful." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/semesterproject/game_select.java">
@@ -517,17 +563,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_game_select.xml">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/user_name.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/game_settings.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
           <caret line="41" column="14" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="41" selection-end-column="14" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/user_name.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_user_name.xml" />
@@ -554,6 +600,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_user_name.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
@@ -563,7 +610,6 @@
           </folding>
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -580,34 +626,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/semesterproject/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_game_settings.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="38" column="38" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
-          <folding>
-            <element signature="e#1021#1039#0" expanded="true" />
-            <element signature="e#2177#2198#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="102">
+          <caret line="57" column="42" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/semesterproject/game_settings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="561">
+          <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#960#1199#0" expanded="true" />
-            <element signature="e#1198#1199#0" expanded="true" />
+            <element signature="e#1240#1479#0" expanded="true" />
+            <element signature="e#1478#1479#0" expanded="true" />
+            <element signature="e#1597#2038#0" expanded="true" />
+            <element signature="e#2037#2038#0" expanded="true" />
+            <element signature="e#2156#2597#0" expanded="true" />
+            <element signature="e#2596#2597#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/semesterproject/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
         </state>
       </provider>
     </entry>

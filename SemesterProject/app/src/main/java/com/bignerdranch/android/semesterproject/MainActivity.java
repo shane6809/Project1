@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.nfc.Tag;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
     private Button mHighScoresButton;
     private Button mSettingsButton;
     private Button mHelpButton;
+    boolean mExternalStorageAvailable = false;
+    boolean mExternalStorageWriteable = false;
+
 
 
 
@@ -29,6 +33,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate(Bundle)called");
         setContentView(R.layout.activity_main);
+
+
+        //check external storage state
+        String state = Environment.getExternalStorageState();
+
+        if (Environment.MEDIA_MOUNTED.equals(state)) {
+            // can read and write the media
+            mExternalStorageAvailable = mExternalStorageWriteable = true;
+        } else if (Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
+
+            // only read the media
+            mExternalStorageAvailable = true;
+            mExternalStorageWriteable = false;
+        } else {
+            // can not read or write
+            mExternalStorageAvailable = mExternalStorageWriteable = false;
+        }
 
 
 
@@ -76,6 +97,8 @@ public class MainActivity extends AppCompatActivity {
     public void onStart() {
         super.onStart();
         Log.d(TAG, "onStart() called");
+
+
     }
 
     @Override

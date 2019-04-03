@@ -34,34 +34,40 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="text"
             android:text="Choose User Name"
-            android:textAlignment="center"
-            android:inputType="text"/>
-
-        <Switch
-            android:id="@+id/switchmusic"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="Music" />
-
-        <Switch
-            android:id="@+id/switchsound"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="Sound" />
+            android:textAlignment="center" />
 
         <Button
             android:id="@+id/savebutton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Save Settings"
             android:onClick="saveData"
-            />
+            android:text="Save User Name" />
 
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Music" />
 
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ToggleButton" />
 
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sound" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ToggleButton" />
 
 
     </LinearLayout>
