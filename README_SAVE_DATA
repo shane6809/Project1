@@ -1,0 +1,6 @@
+My application is saving user profile names, and preferences for sound and music, being on or off.  The save button is used to save
+the user name, and the toggle buttons for the preferences saves without having to use the save button.
+
+I am using key values to save user name and preferences.
+
+My application saves are all currently on the settings page, but I will be using it for saving high scores, using a sql database.
