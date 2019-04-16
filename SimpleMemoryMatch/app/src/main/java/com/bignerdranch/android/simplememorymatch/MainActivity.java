@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        GridView gridView = findViewById(R.id.gridView);
+        final GridView gridView = findViewById(R.id.gridView);
         ImageAdapter imageAdapter = new ImageAdapter(this);
         gridView.setAdapter(imageAdapter);
 
@@ -63,7 +63,9 @@ public class MainActivity extends AppCompatActivity {
 
                         countPair++;
 
-                        if(countPair == 0){
+                        if(countPair==0){
+
+                            gridView.setOnItemClickListener(null);
 
                             Toast.makeText(getApplicationContext(),
                                     "You have Won",Toast.LENGTH_SHORT).show();
