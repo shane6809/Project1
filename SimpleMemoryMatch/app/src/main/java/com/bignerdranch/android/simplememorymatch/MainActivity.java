@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
                         countPair++;
 
-                        if(countPair==0){
+                        if(countPair==8){
 
                             gridView.setOnItemClickListener(null);
 
