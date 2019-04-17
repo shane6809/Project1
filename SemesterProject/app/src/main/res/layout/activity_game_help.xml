@@ -27,6 +27,16 @@
             android:inputType="textPersonName"
             android:text="Help/How to Play"
             android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="482dp"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:singleLine="false"
+            android:text="The object of the memory match game is to make matches by picking two question mark squares. If the first square you chooses, matches the second one you choose, you make a match.  Match all of the squares to win the game. "
+            android:textAlignment="viewStart" />
     </LinearLayout>
 
 
