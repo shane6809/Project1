@@ -10,14 +10,19 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView curView = null;
-    private int countPair = 0;
-    final int[] drawable = new int[] {R.drawable.blue, R.drawable.turkey,
-            R.drawable.goat, R.drawable.bird, R.drawable.rabbit,
-            R.drawable.horse, R.drawable.sheep, R.drawable.dog };
+    ImageView mCurView = null;
 
-    int[] pos = {0,1,2,3,4,5,6,7,0,1,2,3,4,5,6,7};
-    int currentPos = -1;
+    private int countPairs = 0;
+    final int[] drawable = new int[] {R.drawable.cry, R.drawable.cat,
+            R.drawable.chin, R.drawable.fist, R.drawable.glasses,
+            R.drawable.hands, R.drawable.princess, R.drawable.whistle };
+
+    int[] mPosition = {0,1,2,3,4,5,6,7,0,1,2,3,4,5,6,7};
+    int mCurrentPosition = -1;
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,26 +36,34 @@ public class MainActivity extends AppCompatActivity {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if(currentPos <0){
+                if(mCurrentPosition <0){
 
-                    currentPos = position;
-                    curView = (ImageView)view;
+                    mCurrentPosition = position;
+
+
+                    mCurView = (ImageView)view;
                     ((ImageView)view).setImageResource
-                            (drawable[pos[position]]);
+                            (drawable[mPosition[position]]);
+
+
 
                 }
 
                 else{
 
-                    if(currentPos == position){
+                    if(mCurrentPosition == position){
 
                         ((ImageView)view).setImageResource
                                 (R.drawable.question);
+
+
+
+
                     }
 
-                    else if (pos[currentPos] != pos[position]) {
+                    else if (mPosition[mCurrentPosition] != mPosition[position]) {
 
-                        curView.setImageResource(R.drawable.question);
+                        mCurView.setImageResource(R.drawable.question);
                         Toast.makeText(getApplicationContext(),
                                 "No Match",Toast.LENGTH_SHORT).show();
 
@@ -58,12 +71,29 @@ public class MainActivity extends AppCompatActivity {
 
                     else{
 
+
                         ((ImageView)view).setImageResource
-                                (drawable[pos[position]]);
+                                (drawable[mPosition[position]]);
 
-                        countPair++;
 
-                        if(countPair==8){
+
+
+                        Toast.makeText(getApplicationContext(),
+                                "Match",Toast.LENGTH_SHORT).show();
+
+                        countPairs++;
+
+                        if(countPairs ==8 && countPairs <9){
+
+                            gridView.setOnItemClickListener(null);
+
+                            Toast.makeText(getApplicationContext(),
+                                    "Try Again for a Perfect Score",Toast.LENGTH_SHORT).show();
+
+                        }
+
+
+                        if(countPairs ==8 && countPairs >9){
 
                             gridView.setOnItemClickListener(null);
 
@@ -74,7 +104,12 @@ public class MainActivity extends AppCompatActivity {
 
                     }
 
-                    currentPos = -1;
+
+                    mCurrentPosition = -1;
+
+
+
+
 
                 }
             }
