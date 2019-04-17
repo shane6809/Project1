@@ -1,0 +1,2 @@
+My project is accessing the camera application that comes with android.  Using the camera application, I am gaining access to it, than I am saving the picture.
+When the picture is saved, I am accessing the picture from file, and using an Image view to display it, after the picture is taken.
