@@ -1,52 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
 
-    <TextView
-        android:id="@+id/app_title"
-        android:layout_width="match_parent"
+    <GridView
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/app_title"
-        android:gravity="center"
-        />
+        android:id="@+id/gridView"
+        android:numColumns="4"
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="1"
-        android:gravity="center|top"
-        android:orientation="vertical" >
-
-
-        <Button
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Game" />
-
-
-        />
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/counter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|bottom"
-        android:text= "@string/counter"
-        />
-    <Button
-        android:id="@+id/back_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|bottom"
-        android:text= "@string/back_button"
-        />
+        android:padding="1dp"
+        android:footerDividersEnabled="false"
+        android:stretchMode="columnWidth"
 
 
 
+        >
 
 
-</LinearLayout>
+    </GridView>
+
+
+
+</RelativeLayout>
