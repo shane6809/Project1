@@ -20,6 +20,7 @@ public class ImageAdapter extends BaseAdapter {
     private Integer[] mTiles;
     private List imageViews;
     private int mCurrentPosition = -1;
+    private int countPairs = 0;
 
     public ImageAdapter(Context c) {
         mContext = c;
@@ -70,13 +71,11 @@ public class ImageAdapter extends BaseAdapter {
     public void installClick(int position) {
 
         final ImageAdapter self = this;
-        Log.d("ImageAdapter", "click *" + Integer.toString(position));
         ImageView imageView =(ImageView)  imageViews.get(position);
         imageView.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 int pos = imageViews.indexOf((ImageView) v);
-                Log.d("ImageAdapter", "click!" + Integer.toString(pos));
-                show(pos);
+                 show(pos);
 
 
 
@@ -90,10 +89,15 @@ public class ImageAdapter extends BaseAdapter {
                         Toast.makeText(mContext,
                                 "Match!", Toast.LENGTH_SHORT).show();
 
+                        countPairs++;
+
                         removeClick(pos);
                         removeClick(mCurrentPosition);
 
-                    } else {
+                    }
+
+
+                    else {
                         int aux[] = {mCurrentPosition, pos};
                         SleepHide update = new SleepHide(mContext, self, aux);
                         Handler mHandler = new Handler();
@@ -101,6 +105,13 @@ public class ImageAdapter extends BaseAdapter {
                         Toast.makeText(mContext,
                                 "No Match",Toast.LENGTH_SHORT).show();
                     }
+
+
+                    if (countPairs ==12){
+                        Toast.makeText(mContext,
+                                "You have Won!", Toast.LENGTH_SHORT).show();
+                    }
+
 
                     mCurrentPosition = -1;
                 }
@@ -129,7 +140,7 @@ public class ImageAdapter extends BaseAdapter {
         img.setImageResource(mDrawable[piece]);
 
     }
-    //
+
     // Drawables, for tiles
     private Integer[] mDrawable = {
             R.drawable.chin,
