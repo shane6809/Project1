@@ -1,6 +1,9 @@
 package com.bignerdranch.android.memorymatchbettermatch;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceScreen;
 import android.view.View;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
@@ -13,16 +16,32 @@ import java.util.List;
 import java.util.ArrayList;
 import android.util.Log;
 
+import static android.content.Context.MODE_PRIVATE;
 
 
 public class ImageAdapter extends BaseAdapter {
+
     private Context mContext;
     private Integer[] mTiles;
     private List imageViews;
     private int mCurrentPosition = -1;
     private int countPairs = 0;
+    public static int score = 0;
+
+
+
+
+
+
+
+
+
+
+
+
 
     public ImageAdapter(Context c) {
+
         mContext = c;
         List tiles = new ArrayList();
         for(int i=0; i<12; i++) {
@@ -68,11 +87,15 @@ public class ImageAdapter extends BaseAdapter {
         return (ImageView) imageViews.get(position);
     }
 
+
+
     public void installClick(int position) {
 
         final ImageAdapter self = this;
         ImageView imageView =(ImageView)  imageViews.get(position);
         imageView.setOnClickListener(new View.OnClickListener() {
+
+
             public void onClick(View v) {
                 int pos = imageViews.indexOf((ImageView) v);
                  show(pos);
@@ -86,10 +109,14 @@ public class ImageAdapter extends BaseAdapter {
 
                     if (mTiles[pos] == mTiles[mCurrentPosition]) {
 
+                        score= score +500;
+
                         Toast.makeText(mContext,
-                                "Match!", Toast.LENGTH_SHORT).show();
+                                "Match! Score: "+ score, Toast.LENGTH_SHORT).show();
 
                         countPairs++;
+
+
 
                         removeClick(pos);
                         removeClick(mCurrentPosition);
@@ -102,14 +129,28 @@ public class ImageAdapter extends BaseAdapter {
                         SleepHide update = new SleepHide(mContext, self, aux);
                         Handler mHandler = new Handler();
                         mHandler.postDelayed(update, 2000);
+
+                        score = score -100;
+
+
+
                         Toast.makeText(mContext,
-                                "No Match",Toast.LENGTH_SHORT).show();
+                                "No Match! Score: "+ score,Toast.LENGTH_SHORT).show();
+
+
                     }
 
 
                     if (countPairs ==12){
+
                         Toast.makeText(mContext,
-                                "You have Won!", Toast.LENGTH_SHORT).show();
+                                "You have Won! Your Score was " + score, Toast.LENGTH_SHORT).show();
+
+
+
+
+
+
                     }
 
 
@@ -117,13 +158,18 @@ public class ImageAdapter extends BaseAdapter {
                 }
 
             }
+
         });
+
     }
+
+
 
     public void removeClick(int position) {
         ImageView aux;
         aux = (ImageView) imageViews.get(position);
         aux.setOnClickListener(null);
+
     }
 
     public void hide(int position) {
@@ -131,6 +177,7 @@ public class ImageAdapter extends BaseAdapter {
         img = (ImageView) imageViews.get(position);
         int piece = mTiles[position];
         img.setImageResource(R.drawable.question);
+
     }
 
     public void show(int position) {
