@@ -1,0 +1,15 @@
+I have done some code cleanup, getting rid of some redundancies in my xml files.  I have added some comments to help now that the code
+is getting longer.  Got rid of buttons and replaced them with plain text.  Added a quick rundown of how to play the game in the help
+section.  Added a sensor to the background of the start screen,that changes background based on light, kept luminosity scale for future
+testing.  Added a placeholder image to the start screen.  
+
+I have one match game done, its rough around the edges, but does work.  I used a gridview and drawables, it was easy to follow along
+with but is hard to customize.  I thnk I will keep it in as a very easy mode for the game.  The tiles do work for a match, but you can
+click multiple times on the card, and it reverts to the back of the card, and messes with the counter for game over.  The cards do not
+flip over on the second click, but do let you know that it is not a match.  The images are place holders for now, I tried using 128x128
+images and was having problems fitting them, so I tried 56x56, it looks better, but not perfect.
+
+I have been programming the match games outside my semester project to make sure I get it right before putting it in my project.
+
+I am going to try some different types of match game methods, for additional games.  I think I am going to try to use buttons for
+the images, I think this will make, making more games easier.  I am also more familiar with onClickListeners, and using buttons.
