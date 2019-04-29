@@ -8,6 +8,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.media.MediaPlayer;
 import android.nfc.Tag;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private Sensor lightSensor;
     private SensorEventListener lightSensorListener;
 
+    //Media player for background music
 
 
 
@@ -48,6 +50,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate(Bundle)called");
         setContentView(R.layout.activity_main);
+
+
+
+
+
+
+
+
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
 
         lightSensor =
@@ -183,6 +193,8 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         Log.d(TAG, "onPause() called");
         sensorManager.unregisterListener(lightSensorListener);
+
+
     }
 
     @Override
@@ -195,6 +207,8 @@ public class MainActivity extends AppCompatActivity {
     public void onDestroy() {
         super.onDestroy();
         Log.d(TAG, "onDestroy() called");
+
+
     }
 
 

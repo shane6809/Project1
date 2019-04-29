@@ -58,8 +58,10 @@ public class BestActivity extends AppCompatActivity {
         }
 
 
-        tv_score.setText("LAST SCORE: "+ lastScore + "\n" + "BEST1: " + best1 +
-                "BEST2: " + best2 + "BEST3: " + best3);
+        tv_score.setText("LAST SCORE: "+ lastScore + "\n" +
+                "BEST1: " + best1 +
+                "BEST2: " + best2 +
+                "BEST3: " + best3);
 
 
 

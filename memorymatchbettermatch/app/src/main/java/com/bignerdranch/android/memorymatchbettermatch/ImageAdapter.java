@@ -20,7 +20,7 @@ import static android.content.Context.MODE_PRIVATE;
 
 
 public class ImageAdapter extends BaseAdapter {
-
+    public static int scored;
     private Context mContext;
     private Integer[] mTiles;
     private List imageViews;
@@ -31,8 +31,7 @@ public class ImageAdapter extends BaseAdapter {
 
 
 
-
-
+private SharedPreferences prefs;
 
 
 
@@ -147,7 +146,7 @@ public class ImageAdapter extends BaseAdapter {
                                 "You have Won! Your Score was " + score, Toast.LENGTH_SHORT).show();
 
 
-
+                        scored = score;
 
 
 
