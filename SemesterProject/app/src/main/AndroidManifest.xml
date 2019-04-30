@@ -4,6 +4,13 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <uses-feature
+        android:name="android.hardware.sensor.proximity"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.gyroscope"
+        android:required="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,7 +18,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".user_name"></activity>
+        <activity android:name=".user_name" />
         <activity android:name=".highscores_page" />
         <activity android:name=".game_settings" />
         <activity android:name=".game_page" />
@@ -28,11 +35,5 @@
             </intent-filter>
         </activity>
     </application>
-    <uses-feature
-        android:name="android.hardware.sensor.proximity"
-        android:required="true" />
-    <uses-feature
-        android:name="android.hardware.sensor.gyroscope"
-        android:required="true" />
 
 </manifest>

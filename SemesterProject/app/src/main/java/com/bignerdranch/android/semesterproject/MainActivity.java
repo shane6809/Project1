@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private SensorEventListener lightSensorListener;
 
     //Media player for background music
-
+    MediaPlayer mediaPlayer;
 
 
 
@@ -65,9 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
         //message for hardware not having the correct sensor
         if (lightSensor == null) {
-            Toast.makeText(this, "You do not have the necessary sensor",
-                    Toast.LENGTH_SHORT).show();
-            finish();
+         finish();
 
         }
 
@@ -80,29 +78,24 @@ public class MainActivity extends AppCompatActivity {
                 // Code for screen change based on light
                 if (sensorEvent.values[0] > 30000f) { // Brighter color for easy reading in high light
                     getWindow().getDecorView().setBackgroundColor(Color.WHITE);
-                    Toast.makeText(MainActivity.this, "Luminosity" + value, Toast.LENGTH_SHORT).show();
 
                 }
 
                 if (sensorEvent.values[0] > 22001f && sensorEvent.values[0] < 29999) { // Brighter color for easy reading in medium-high light
                     getWindow().getDecorView().setBackgroundColor(Color.YELLOW);
-                    Toast.makeText(MainActivity.this, "Luminosity" + value, Toast.LENGTH_SHORT).show();
 
                 }
 
                 if (sensorEvent.values[0] > 17001f && sensorEvent.values[0] < 22000) { // Brighter color for easy reading in medium light
                     getWindow().getDecorView().setBackgroundColor(Color.RED);
-                    Toast.makeText(MainActivity.this, "Luminosity" + value, Toast.LENGTH_SHORT).show();
 
                 }
 
                 if (sensorEvent.values[0] > 12001f && sensorEvent.values[0] < 17000) { // Brighter color for easy reading in medium light
                     getWindow().getDecorView().setBackgroundColor(Color.BLUE);
-                    Toast.makeText(MainActivity.this, "Luminosity" + value, Toast.LENGTH_SHORT).show();
 
                 } else if (sensorEvent.values[0] < 12000f) { // Night mode for low light readability using DarkViolet
                     getWindow().getDecorView().setBackgroundColor(getResources().getColor(R.color.DarkViolet));
-                    Toast.makeText(MainActivity.this, "Luminosity" + value, Toast.LENGTH_SHORT).show();
 
                 }
             }
@@ -177,8 +170,8 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         Log.d(TAG, "onStart() called");
 
-
     }
+
 
     @Override
     public void onResume() {

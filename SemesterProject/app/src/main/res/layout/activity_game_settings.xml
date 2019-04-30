@@ -45,18 +45,6 @@
             android:onClick="saveData"
             android:text="Save User Name" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Music" />
-
-        <ToggleButton
-            android:id="@+id/toggleButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:checked="false"
-            android:text="ToggleButton" />
 
         <TextView
             android:id="@+id/textView3"
@@ -74,7 +62,7 @@
             android:id="@+id/switch1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Switch" />
+            android:text="Music" />
 
 
     </LinearLayout>
