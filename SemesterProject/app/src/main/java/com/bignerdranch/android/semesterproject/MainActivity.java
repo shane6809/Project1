@@ -11,11 +11,14 @@ import android.hardware.SensorManager;
 import android.media.MediaPlayer;
 import android.nfc.Tag;
 import android.os.Environment;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mHighScoresButton;
     private Button mSettingsButton;
     private Button mHelpButton;
+
 
     /*Storage variables*/
     boolean mExternalStorageAvailable = false;
@@ -40,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
 
     //Media player for background music
     MediaPlayer mediaPlayer;
+    private SharedPreferences prefs;
+    private Switch mSwitch;
+
 
 
 
@@ -51,9 +58,67 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onCreate(Bundle)called");
         setContentView(R.layout.activity_main);
 
+        final Switch mSwitch = (Switch) findViewById(R.id.switch1);
+
+        mediaPlayer = MediaPlayer.create(getApplicationContext()
+                ,R.raw.ben);
+
+        prefs = getSharedPreferences("MY_DATA", MODE_PRIVATE);
 
 
 
+        mSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+
+
+
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+
+                SharedPreferences sharedPreferences3 = PreferenceManager.
+                        getDefaultSharedPreferences(getApplicationContext());
+                SharedPreferences.Editor editor = sharedPreferences3.edit();
+                editor.putBoolean("switch1", mSwitch.isChecked());
+                editor.commit();
+
+
+
+
+
+
+                if (isChecked) {
+                    // The toggle is enabled
+
+
+                    mediaPlayer.start();
+
+                    editor.putBoolean("switch1", true);
+                    editor.commit();
+
+
+                } else {
+                    // The toggle is disabled
+                    // mediaPlayer.reset();
+                    mediaPlayer.pause();
+                    // mediaPlayer = null;
+                    editor.putBoolean("switch1", false);
+                    editor.commit();
+
+                }
+
+
+            }
+        });
+
+
+
+        SharedPreferences sharedPreferences = PreferenceManager
+                .getDefaultSharedPreferences(getApplicationContext());
+
+//toggle button for sound save preference
+        SharedPreferences sharedPreferences3 = PreferenceManager
+                .getDefaultSharedPreferences(getApplicationContext());
+        mSwitch.setChecked(sharedPreferences.getBoolean("switch1", true));
 
 
 
@@ -142,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mSettingsButton=(Button)findViewById(R.id.settings_button);
+      /*  mSettingsButton=(Button)findViewById(R.id.settings_button);
         mSettingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -150,6 +215,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        */
 
         mHighScoresButton=(Button)findViewById(R.id.high_button);
         mHighScoresButton.setOnClickListener(new View.OnClickListener() {

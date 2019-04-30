@@ -66,13 +66,13 @@ public class game_settings extends AppCompatActivity {
             }
         });
 
-        //toggle button for music
-        mToggleButton = (ToggleButton) findViewById(R.id.toggleButton);
+        /*toggle button for music
+       // mToggleButton = (ToggleButton) findViewById(R.id.toggleButton);
 
         //on click listener for music
-        mToggleButton.setOnClickListener(new ToggleButton.OnClickListener() {
+       // mToggleButton.setOnClickListener(new ToggleButton.OnClickListener() {
 
-            public void onClick(View v) {
+           // public void onClick(View v) {
                 SharedPreferences sharedPreferences = PreferenceManager
                         .getDefaultSharedPreferences(getApplicationContext());
                 SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -82,12 +82,12 @@ public class game_settings extends AppCompatActivity {
         });
 
         //Toggle button for sound
-        sToggleButton = (ToggleButton) findViewById(R.id.toggleButton2);
+       // sToggleButton = (ToggleButton) findViewById(R.id.toggleButton2);
 
         //on click listener for sound
-        sToggleButton.setOnClickListener(new ToggleButton.OnClickListener() {
+       // sToggleButton.setOnClickListener(new ToggleButton.OnClickListener() {
 
-            public void onClick(View v) {
+            //public void onClick(View v) {
                 SharedPreferences sharedPreferences2 = PreferenceManager
                         .getDefaultSharedPreferences(getApplicationContext());
                 SharedPreferences.Editor editor = sharedPreferences2.edit();
@@ -98,7 +98,7 @@ public class game_settings extends AppCompatActivity {
 
 
         });
-
+*/
 
         mediaPlayer = MediaPlayer.create(getApplicationContext()
                 ,R.raw.ben);
