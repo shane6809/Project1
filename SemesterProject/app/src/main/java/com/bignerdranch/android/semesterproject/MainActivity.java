@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     /*button variables */
     private Button mStartButton;
     private Button mHighScoresButton;
-    private Button mSettingsButton;
+    private Button mUserButton;
     private Button mHelpButton;
 
 
@@ -207,8 +207,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-      /*  mSettingsButton=(Button)findViewById(R.id.settings_button);
-        mSettingsButton.setOnClickListener(new View.OnClickListener() {
+       mUserButton=(Button)findViewById(R.id.user);
+        mUserButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, game_settings.class);
@@ -216,7 +216,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        */
+
 
         mHighScoresButton=(Button)findViewById(R.id.high_button);
         mHighScoresButton.setOnClickListener(new View.OnClickListener() {
