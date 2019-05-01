@@ -3,6 +3,7 @@ package com.bignerdranch.android.memorymatchbettermatch;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.preference.PreferenceScreen;
 import android.view.View;
 import android.widget.BaseAdapter;
@@ -31,7 +32,13 @@ public class ImageAdapter extends BaseAdapter {
 
 
 
-private SharedPreferences prefs;
+    SharedPreferences prefs;
+    SharedPreferences.Editor editor;
+
+    int defaultInt = 0;
+    int hiScore;
+
+
 
 
 
@@ -40,6 +47,8 @@ private SharedPreferences prefs;
 
 
     public ImageAdapter(Context c) {
+
+
 
         mContext = c;
         List tiles = new ArrayList();
@@ -127,7 +136,7 @@ private SharedPreferences prefs;
                         int aux[] = {mCurrentPosition, pos};
                         SleepHide update = new SleepHide(mContext, self, aux);
                         Handler mHandler = new Handler();
-                        mHandler.postDelayed(update, 2000);
+                        mHandler.postDelayed(update, 1000);
 
                         score = score -100;
 
@@ -146,7 +155,9 @@ private SharedPreferences prefs;
                                 "You have Won! Your Score was " + score, Toast.LENGTH_SHORT).show();
 
 
-                        scored = score;
+
+                            scored = score;
+
 
 
 
@@ -154,7 +165,11 @@ private SharedPreferences prefs;
 
 
                     mCurrentPosition = -1;
+
+
                 }
+
+
 
             }
 

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridView;
@@ -14,6 +15,8 @@ Button highscore;
 
 int scorer = ImageAdapter.scored;
 
+//private SharedPreferences prefs;
+
 
 
 @Override
@@ -23,6 +26,11 @@ int scorer = ImageAdapter.scored;
         setContentView(R.layout.activity_main);
         buildTiles();
 
+       // prefs = getSharedPreferences("MY_DATA", MODE_PRIVATE);
+
+       // SharedPreferences sharedPreferences = PreferenceManager
+              //  .getDefaultSharedPreferences(getApplicationContext());
+
 
         highscore =(Button) findViewById(R.id.highscore);
         highscore.setOnClickListener(new View.OnClickListener() {
@@ -31,7 +39,7 @@ int scorer = ImageAdapter.scored;
                 SharedPreferences preferences = getSharedPreferences("PREFS", 0);
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putInt("lastScore", scorer);
-                editor.apply();
+                editor.commit();
 
                 Intent intent =new Intent(MainActivity.this,BestActivity.class);
                 startActivity(intent);

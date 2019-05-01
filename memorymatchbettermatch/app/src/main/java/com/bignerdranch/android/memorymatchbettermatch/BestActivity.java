@@ -10,8 +10,9 @@ public class BestActivity extends AppCompatActivity {
 
     TextView tv_score;
 
-    int lastScore;
+    int lastScore= ImageAdapter.scored;
     int best1, best2, best3;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -21,7 +22,7 @@ public class BestActivity extends AppCompatActivity {
         tv_score = (TextView) findViewById(R.id.tv_score);
 
         SharedPreferences preferences = getSharedPreferences("PREFS",0);
-        lastScore = preferences.getInt("lastScore",0);
+        //lastScore = preferences.getInt("lastScore",0);
         best1 = preferences.getInt("best1",0);
         best2 = preferences.getInt("best2",0);
         best3 = preferences.getInt("best3",0);
@@ -59,8 +60,8 @@ public class BestActivity extends AppCompatActivity {
 
 
         tv_score.setText("LAST SCORE: "+ lastScore + "\n" +
-                "BEST1: " + best1 +
-                "BEST2: " + best2 +
+                "BEST1: " + best1 + "\n" +
+                "BEST2: " + best2 + "\n" +
                 "BEST3: " + best3);
 
 
