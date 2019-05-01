@@ -32,8 +32,7 @@ public class ImageAdapter extends BaseAdapter {
 
 
 
-    SharedPreferences prefs;
-    SharedPreferences.Editor editor;
+
 
     int defaultInt = 0;
     int hiScore;
