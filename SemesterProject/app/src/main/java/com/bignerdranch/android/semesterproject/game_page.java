@@ -1,129 +1,62 @@
 package com.bignerdranch.android.semesterproject;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.Toast;
 
-public class game_page extends AppCompatActivity {
+public class game_page extends Activity
+{
+    Button highscore;
 
-    ImageView mCurView = null;
+    int scorer = ImageAdapter.scored;
 
-    private int countPairs = 0;
-    final int[] drawable = new int[] {R.drawable.cry, R.drawable.cat,
-            R.drawable.chin, R.drawable.fist, R.drawable.glasses,
-            R.drawable.hands, R.drawable.princess, R.drawable.whistle };
+//private SharedPreferences prefs;
 
-    int[] mPosition = {0,1,2,3,4,5,6,7,0,1,2,3,4,5,6,7};
-    int mCurrentPosition = -1;
-
-
-
-
-    private Button mBackButton;
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_page);
+        buildTiles();
+
+        // prefs = getSharedPreferences("MY_DATA", MODE_PRIVATE);
+
+        // SharedPreferences sharedPreferences = PreferenceManager
+        //  .getDefaultSharedPreferences(getApplicationContext());
 
 
-        final GridView gridView = findViewById(R.id.gridView);
-        ImageAdapter imageAdapter = new ImageAdapter(this);
-        gridView.setAdapter(imageAdapter);
+        highscore =(Button) findViewById(R.id.highscore);
+        highscore.setOnClickListener(new View.OnClickListener() {
 
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if(mCurrentPosition <0){
+            public void onClick(View v) {
+                SharedPreferences preferences = getSharedPreferences("PREFS", 0);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putInt("lastScore", scorer);
+                editor.commit();
 
-                    mCurrentPosition = position;
-
-
-                    mCurView = (ImageView)view;
-                    ((ImageView)view).setImageResource
-                            (drawable[mPosition[position]]);
-
-
-
-                }
-
-                else{
-
-                    if(mCurrentPosition == position){
-
-                        ((ImageView)view).setImageResource
-                                (R.drawable.question);
+                Intent intent =new Intent(game_page.this, highscores_page.class);
+                startActivity(intent);
+                finish();
 
 
-
-
-                    }
-
-                    else if (mPosition[mCurrentPosition] != mPosition[position]) {
-
-                        mCurView.setImageResource(R.drawable.question);
-                        Toast.makeText(getApplicationContext(),
-                                "No Match",Toast.LENGTH_SHORT).show();
-
-                    }
-
-                    else{
-
-
-                        ((ImageView)view).setImageResource
-                                (drawable[mPosition[position]]);
-
-
-
-
-                        Toast.makeText(getApplicationContext(),
-                                "Match",Toast.LENGTH_SHORT).show();
-
-                        countPairs++;
-
-                        if(countPairs ==8 && countPairs <9){
-
-                            gridView.setOnItemClickListener(null);
-
-                            Toast.makeText(getApplicationContext(),
-                                    "Try Again for a Perfect Score",Toast.LENGTH_SHORT).show();
-
-                        }
-
-
-                        if(countPairs ==8 && countPairs >9){
-
-                            gridView.setOnItemClickListener(null);
-
-                            Toast.makeText(getApplicationContext(),
-                                    "You have Won", Toast.LENGTH_SHORT).show();
-
-                        }
-
-                    }
-
-
-                    mCurrentPosition = -1;
-
-
-
-
-
-                }
             }
         });
-
-
     }
 
+    private void buildTiles()
+    {
+        GridView gridview = (GridView) findViewById(R.id.gridview);
+        gridview.setAdapter(new ImageAdapter(this));
+    }
+
+
+
 }
-
-
-
