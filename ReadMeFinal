@@ -1,0 +1,11 @@
+I have gone to the simple match game that I had to a more complicated one.  The game board is now random, and the clicks are
+accurate, and there are no longer double clicks on tiles.  I have also made the board larger.  I have added a high score board, that keeps track of the top three high scores.
+I have added music to the game, and the music goes throughout the application.  I changed the settings for the music to be on the
+main page, and went from a toggle button, to a switch, because I liked the look of it better on the home screen.  I turned the settings
+screen to be a username screen, and added username to the high score screen.  I added some more navigation options for the game itself,
+and the high score screen.  I cleaned up my code, but kept some of my documentation,
+for what did not work in the application.  
+
+Everything on the app for the most part operates like I intended.  I was not able to save Names for high scores on the board,
+when I tried it would crash, or not work properly.  Some of the images I used do not look great on screen, but a lot of images,
+I tried would instantly crashed the game.  I chose stability over it looking good.
