@@ -12,6 +12,7 @@ import android.widget.GridView;
 public class game_page extends Activity
 {
     Button highscore;
+    Button mBackButton;
 
     int scorer = ImageAdapter.scored;
 
@@ -47,6 +48,15 @@ public class game_page extends Activity
                 finish();
 
 
+            }
+        });
+
+        mBackButton = (Button) findViewById(R.id.back_button);
+        mBackButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(game_page.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }
