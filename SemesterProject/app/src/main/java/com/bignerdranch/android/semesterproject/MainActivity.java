@@ -192,7 +192,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //start button
-                Intent intent = new Intent(MainActivity.this, game_select.class);
+                Intent intent = new Intent(MainActivity.this, game_page.class);
                 startActivity(intent);
 
             }

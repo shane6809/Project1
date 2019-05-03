@@ -18,9 +18,8 @@ import android.widget.TextView;
         private Button mBackButton;
         private SharedPreferences prefs;
 
-        int lastScore = ImageAdapter.scored;
+        int lastScore= ImageAdapter.scored;
         int best1, best2, best3;
-        String temper;
         String name, name1, name2, name3;
 
 
@@ -31,15 +30,19 @@ import android.widget.TextView;
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_highscores_page);
 
+            //View for score board
             tv_score = (TextView) findViewById(R.id.tv_score);
 
+
+            //shared preferences for scores
             SharedPreferences preferences = getSharedPreferences("PREFS", 0);
             //lastScore = preferences.getInt("lastScore",0);
             best1 = preferences.getInt("best1", 0);
             best2 = preferences.getInt("best2", 0);
             best3 = preferences.getInt("best3", 0);
-            lastScore=preferences.getInt("last",lastScore);
 
+
+            //Shared Preferences for Name
             prefs = getSharedPreferences("MY_DATA", MODE_PRIVATE);
             name = prefs.getString("MY_NAME", "");
            // name1 = prefs.getString("name1","");
@@ -51,38 +54,30 @@ import android.widget.TextView;
            // editor.apply();
 
 
-
-            if (lastScore > best3) {
+            //statements to save score to board
+            if(lastScore > best3){
                 best3 = lastScore;
-                //name3 = name;
                 SharedPreferences.Editor editor = preferences.edit();
-                editor.putInt("best3", best3);
-                //editor.putString("name3", name3);
+                editor.putInt("best3",best3);
                 editor.apply();
             }
 
-            if (lastScore > best2) {
-                int temp = best2;
-                //temper = name2;
-                best2 = lastScore;
-               // name2 =name;
-                best3 = temp;
-               // name3 = temper;
+            if(lastScore > best2){
+                int temp= best2;
+                best2=lastScore;
+                best3=temp;
 
                 SharedPreferences.Editor editor = preferences.edit();
-                editor.putInt("best3", best3);
-                editor.putInt("best2", best2);
-                //editor.putString("name3", name3);
-               // editor.putString("name2", name2);
+                editor.putInt("best3",best3);
+                editor.putInt("best2",best2);
                 editor.apply();
             }
+
+
             if(lastScore > best1){
                 int temp= best1;
-               // temper = name;
                 best1=lastScore;
-                name1 = name;
                 best2=temp;
-                //name2 = temper;
 
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putInt("best2",best2);
@@ -94,19 +89,16 @@ import android.widget.TextView;
 
 
 
-
+            //text for score board results, and past scores
             tv_score.setText("LAST SCORE: " + name + "\n" + lastScore + "\n" +
                     "Top Score: " + name1 + "\n" + best1 + "\n" +
                     "Second Place: " + best2 + "\n" +
                     "Third Place: " + best3);
 
 
-            SharedPreferences.Editor editor = preferences.edit();
-            editor.putInt ("last",lastScore);
-            editor.putString("name",name1);
-            editor.apply();
 
-           /* mBackButton = (Button) findViewById(R.id.back_button);
+            //button to leave high scores.
+            mBackButton = (Button) findViewById(R.id.back_button);
             mBackButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -115,7 +107,7 @@ import android.widget.TextView;
                 }
             });
 
-            */
+
         }
     }
 
